@@ -22,7 +22,7 @@ form?.addEventListener("submit", async (event) => {
   const data = Object.fromEntries(new FormData(form).entries());
 
   try {
-    const response = await fetch("YOUR_APPS_SCRIPT_URL", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwFbUdiT1XJOkDDYSfeILWoQWtRDMab9FqDaXh3ZGNmTZeHjLatjeQ_plTQ8cliNgat/exec", {
       method: "POST",
       mode: "cors",
       headers: {
