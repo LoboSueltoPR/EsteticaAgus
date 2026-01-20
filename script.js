@@ -10,19 +10,33 @@ const durations = {
   "Manicuría & Spa": "40 minutos",
 };
 
+const scriptUrl = "YOUR_APPS_SCRIPT_URL";
+
 serviceSelect?.addEventListener("change", (event) => {
   const value = event.target.value;
-  durationInput.value = durations[value] ?? "45 minutos";
+  if (durationInput) {
+    durationInput.value = durations[value] ?? "45 minutos";
+  }
 });
 
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (!status) {
+    return;
+  }
+
+  if (!scriptUrl || scriptUrl.includes("YOUR_APPS_SCRIPT_URL")) {
+    status.textContent =
+      "Falta configurar la URL del Apps Script para guardar el turno.";
+    return;
+  }
+
   status.textContent = "Enviando tu turno...";
 
   const data = Object.fromEntries(new FormData(form).entries());
 
   try {
-    const response = await fetch("YOUR_APPS_SCRIPT_URL", {
+    const response = await fetch(scriptUrl, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -36,7 +50,9 @@ form?.addEventListener("submit", async (event) => {
     }
 
     form.reset();
-    durationInput.value = "45 minutos";
+    if (durationInput) {
+      durationInput.value = "45 minutos";
+    }
     status.textContent =
       "¡Listo! Recibimos tu solicitud. Te confirmaremos por WhatsApp.";
   } catch (error) {

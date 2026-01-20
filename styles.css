@@ -245,6 +245,42 @@ section {
   background: #fff8f6;
 }
 
+.booking-cta {
+  background: #fff8f6;
+}
+
+.booking-cta-card {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid #f4ded7;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 40px rgba(201, 115, 77, 0.08);
+}
+
+.booking-cta-card h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+}
+
+.booking-cta-card p {
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.booking-cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .steps {
   max-width: 700px;
   margin: 0 auto 32px;
