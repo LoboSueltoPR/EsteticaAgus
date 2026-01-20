@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Belleza Natural | Centro de Estética</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="inicio">
+      <nav class="nav">
+        <div class="logo">
+          <span class="logo-icon">✿</span>
+          <span>Belleza Natural</span>
+        </div>
+        <div class="nav-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="nav-actions">
+          <a href="tel:+541112345678" class="phone">☎ +54 11 1234-5678</a>
+          <a href="#reservar" class="btn btn-primary">Reservar Turno</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="pill">✧ Reservá tu turno online</span>
+          <h1>
+            Tu momento de <span>belleza</span><br />
+            y bienestar
+          </h1>
+          <p>
+            Descubrí tratamientos personalizados con profesionales expertos. Relajate y
+            dejá que cuidemos de vos.
+          </p>
+          <div class="hero-actions">
+            <a href="#reservar" class="btn btn-primary">Reservar Turno</a>
+            <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>+500</strong>
+              <span>Clientes Felices</span>
+            </div>
+            <div>
+              <strong>5★</strong>
+              <span>Calificación</span>
+            </div>
+            <div>
+              <strong>+10</strong>
+              <span>Años de Experiencia</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Horario rápido</h3>
+          <p>De lunes a sábado · 9:00 a 19:00</p>
+          <div class="hero-card-row">
+            <span>WhatsApp directo</span>
+            <a class="link" href="https://wa.me/5491112345678">Escribinos</a>
+          </div>
+          <div class="hero-card-row">
+            <span>Ubicación</span>
+            <span>Palermo, CABA</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="servicios">
+        <div class="section-heading">
+          <h2>Servicios destacados</h2>
+          <p>Tratamientos personalizados para cada etapa y necesidad.</p>
+        </div>
+        <div class="service-grid">
+          <article>
+            <h3>Depilación Facial</h3>
+            <p>Depilación de cejas, bozo y mentón.</p>
+            <span>30 minutos · $2.000</span>
+          </article>
+          <article>
+            <h3>Limpieza Facial Profunda</h3>
+            <p>Tratamiento completo de limpieza e hidratación facial.</p>
+            <span>60 minutos · $4.500</span>
+          </article>
+          <article>
+            <h3>Masajes Relajantes</h3>
+            <p>Maniobras suaves para aliviar tensiones y estrés.</p>
+            <span>45 minutos · $3.800</span>
+          </article>
+          <article>
+            <h3>Manicuría &amp; Spa</h3>
+            <p>Manos prolijas con esmaltes veganos y cuidado premium.</p>
+            <span>40 minutos · $3.200</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking" id="reservar">
+        <div class="section-heading">
+          <h2>Reservar Turno</h2>
+          <p>Completá los pasos para reservar tu turno. Es rápido y sin registro.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step active">
+            <span>1</span>
+            <small>Servicio</small>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <small>Profesional</small>
+          </div>
+          <div class="step">
+            <span>3</span>
+            <small>Fecha y hora</small>
+          </div>
+          <div class="step">
+            <span>4</span>
+            <small>Tus datos</small>
+          </div>
+        </div>
+
+        <div class="booking-card">
+          <form id="booking-form">
+            <div class="form-group">
+              <label for="service">Elegí tu servicio</label>
+              <select id="service" name="service" required>
+                <option value="">Seleccioná un tratamiento</option>
+                <option value="Depilación Facial">Depilación Facial</option>
+                <option value="Limpieza Facial Profunda">Limpieza Facial Profunda</option>
+                <option value="Masajes Relajantes">Masajes Relajantes</option>
+                <option value="Manicuría & Spa">Manicuría &amp; Spa</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="professional">Profesional</label>
+                <select id="professional" name="professional" required>
+                  <option value="Sin preferencia">Sin preferencia</option>
+                  <option value="Laura Fernández">Laura Fernández</option>
+                  <option value="Camila Ruiz">Camila Ruiz</option>
+                  <option value="Valentina Díaz">Valentina Díaz</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="duration">Duración estimada</label>
+                <input id="duration" name="duration" type="text" value="45 minutos" readonly />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Fecha</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Hora</label>
+                <input id="time" name="time" type="time" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">Nombre</label>
+                <input id="first-name" name="firstName" type="text" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Apellido</label>
+                <input id="last-name" name="lastName" type="text" placeholder="Tu apellido" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Ej: +54 11 1234-5678"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email (opcional)</label>
+              <input id="email" name="email" type="email" placeholder="tu@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notas adicionales (opcional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Preferencias, alergias, etc."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Confirmar turno</button>
+              <span class="form-hint">
+                Te llegará un WhatsApp de confirmación y tu turno quedará guardado.
+              </span>
+            </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonios">
+        <div class="section-heading">
+          <h2>Testimonios</h2>
+          <p>Lo que dicen nuestras clientas.</p>
+        </div>
+        <div class="testimonial-grid">
+          <article>
+            <p>"Un espacio cálido y relajante. Me encantó el trato y la atención."</p>
+            <strong>Mariana P.</strong>
+          </article>
+          <article>
+            <p>"Reservé online en dos minutos y el servicio fue excelente."</p>
+            <strong>Lucía S.</strong>
+          </article>
+          <article>
+            <p>"Profesionales súper amables y tratamientos con resultados visibles."</p>
+            <strong>Carolina G.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div class="section-heading">
+          <h2>Contacto</h2>
+          <p>¿Querés agendar por WhatsApp o pedir más info? Escribinos.</p>
+        </div>
+        <div class="contact-card">
+          <div>
+            <h3>Dirección</h3>
+            <p>Av. Santa Fe 1234, Palermo, CABA</p>
+            <h3>Horarios</h3>
+            <p>Lunes a sábado · 9:00 a 19:00</p>
+          </div>
+          <div>
+            <h3>Contacto directo</h3>
+            <p>Teléfono: +54 11 1234-5678</p>
+            <p>Email: hola@bellezanatural.com</p>
+            <a class="btn btn-secondary" href="https://wa.me/5491112345678">Enviar WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Belleza Natural. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
