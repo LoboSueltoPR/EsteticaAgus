@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservas | Belleza Natural</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="logo">
+          <span class="logo-icon">✿</span>
+          <a href="index.html">Belleza Natural</a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#testimonios">Testimonios</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+        <div class="nav-actions">
+          <a href="tel:+541112345678" class="phone">☎ +54 11 1234-5678</a>
+          <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="booking" id="reservar">
+        <div class="section-heading">
+          <h1>Reservar Turno</h1>
+          <p>Completá los pasos para reservar tu turno. Es rápido y sin registro.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step active">
+            <span>1</span>
+            <small>Servicio</small>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <small>Profesional</small>
+          </div>
+          <div class="step">
+            <span>3</span>
+            <small>Fecha y hora</small>
+          </div>
+          <div class="step">
+            <span>4</span>
+            <small>Tus datos</small>
+          </div>
+        </div>
+
+        <div class="booking-card">
+          <form id="booking-form">
+            <div class="form-group">
+              <label for="service">Elegí tu servicio</label>
+              <select id="service" name="service" required>
+                <option value="">Seleccioná un tratamiento</option>
+                <option value="Depilación Facial">Depilación Facial</option>
+                <option value="Limpieza Facial Profunda">Limpieza Facial Profunda</option>
+                <option value="Masajes Relajantes">Masajes Relajantes</option>
+                <option value="Manicuría & Spa">Manicuría &amp; Spa</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="professional">Profesional</label>
+                <select id="professional" name="professional" required>
+                  <option value="Sin preferencia">Sin preferencia</option>
+                  <option value="Laura Fernández">Laura Fernández</option>
+                  <option value="Camila Ruiz">Camila Ruiz</option>
+                  <option value="Valentina Díaz">Valentina Díaz</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="duration">Duración estimada</label>
+                <input id="duration" name="duration" type="text" value="45 minutos" readonly />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Fecha</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Hora</label>
+                <input id="time" name="time" type="time" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">Nombre</label>
+                <input id="first-name" name="firstName" type="text" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Apellido</label>
+                <input id="last-name" name="lastName" type="text" placeholder="Tu apellido" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Ej: +54 11 1234-5678"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email (opcional)</label>
+              <input id="email" name="email" type="email" placeholder="tu@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notas adicionales (opcional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Preferencias, alergias, etc."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Confirmar turno</button>
+              <span class="form-hint">
+                Tu solicitud se guarda en Google Sheets y te confirmamos por WhatsApp.
+              </span>
+            </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Belleza Natural. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
